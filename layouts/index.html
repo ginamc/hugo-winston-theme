@@ -29,11 +29,11 @@
       {{ end }}
       {{ partial "paginator" . }}
     {{ else }}
-      {{ $limit := .Site.Params.limitPostsOnHomepage | default 3 }}
+      {{ $limit := .Site.Params.limitPostsOnHomepage | default 1 }}
       {{ range first $limit $sorted}}
         {{ .Render "summary" }}
       {{ end }}
-      <a class="view-more" href="/posts">More Posts</a>
+      <a class="view-more" href="/posts">Read more in the archive ➡</a>
     {{ end }}
   {{ end }}
 
